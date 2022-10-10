@@ -1,0 +1,190 @@
+SQL> insert into employees_1 
+  2  (empno,ename,job,mgr,hiredate,sal,comm,deptno)
+  3  values(1001, 'KING', 'PRESIDENT', null, to_date('17-11-2020','dd-mm-yyyy'), 28000, null, 10);
+
+1 row created.
+
+SQL> insert into employees_1 
+  2  (empno,ename,job,mgr,hiredate,sal,comm,deptno)
+  3  values(1002, 'BLAKE', 'MANAGER', 7839, to_date('1-5-2019','dd-mm-yyyy'), 25000, null, 30);
+
+1 row created.
+
+SQL> 
+SQL> insert into employees_1 
+  2  (empno,ename,job,mgr,hiredate,sal,comm,deptno)
+  3  values(1003, 'CLARK', 'MANAGER', 7839, to_date('9-6-2021','dd-mm-yyyy'), 24000, null, 10);
+
+1 row created.
+
+SQL> 
+SQL> insert into employees_1 
+  2  (empno,ename,job,mgr,hiredate,sal,comm,deptno)
+  3  values(1004, 'JONES', 'MANAGER', 7839, to_date('2-4-2021','dd-mm-yyyy'), 22500, null, 20);
+
+1 row created.
+
+SQL> 
+SQL> insert into employees_1 
+  2  (empno,ename,job,mgr,hiredate,sal,comm,deptno)
+  3  values(1005, 'SCOTT', 'ANALYST', 7566, to_date('13-7-2020','dd-mm-yyyy') , 23000, null, 20);
+
+1 row created.
+
+SQL> 
+SQL> insert into employees_1 
+  2  (empno,ename,job,mgr,hiredate,sal,comm,deptno)
+  3  values(1006, 'FORD', 'ANALYST', 7566, to_date('3-12-2019','dd-mm-yyyy'), 20000, null, 20);
+
+1 row created.
+
+SQL> 
+SQL> insert into employees_1 
+  2  (empno,ename,job,mgr,hiredate,sal,comm,deptno)
+  3  values(1007, 'SMITH', 'CLERK', 7902, to_date('17-12-2020','dd-mm-yyyy'), 13000, null, 20);
+
+1 row created.
+
+SQL> 
+SQL> insert into employees_1 
+  2  (empno,ename,job,mgr,hiredate,sal,comm,deptno)
+  3  emp values(1008, 'ALLEN', 'SALESMAN', 7698, to_date('20-2-2019','dd-mm-yyyy'), 11600, 300, 30)
+
+emp values(1008, 'ALLEN', 'SALESMAN', 7698, to_date('20-2-2019','dd-mm-yyyy'), 11600, 300, 30)
+*
+ERROR at line 3:
+ORA-00926: missing VALUES keyword
+
+
+SQL> 
+SQL> insert into employees_1 
+  2  (empno,ename,job,mgr,hiredate,sal,comm,deptno)
+  3  emp values(1009, 'WARD', 'SALESMAN', 7698, to_date('22-2-2020','dd-mm-yyyy'), 11250, 500, 30);
+emp values(1009, 'WARD', 'SALESMAN', 7698, to_date('22-2-2020','dd-mm-yyyy'), 11250, 500, 30)
+*
+ERROR at line 3:
+ORA-00926: missing VALUES keyword
+
+
+SQL> 
+SQL> insert into employees_1 
+  2  (empno,ename,job,mgr,hiredate,sal,comm,deptno)
+  3  values(1010, 'MARTIN', 'SALESMAN', 7698, to_date('28-9-1981','dd-mm-yyyy'), 11250, 1400, 30);
+
+1 row created.
+
+SQL> 
+SQL> insert into employees_1 
+  2  (empno,ename,job,mgr,hiredate,sal,comm,deptno)
+  3  values(1011, 'ADAMS', 'CLERK', 7788, to_date('13-5-2019', 'dd-mm-yyyy'),12000, null, 20);
+
+1 row created.
+
+SQL> 
+SQL> insert into employees_1 
+  2  (empno,ename,job,mgr,hiredate,sal,comm,deptno)
+  3  values(1012, 'JAMES', 'CLERK', 7698, to_date('3-12-2020','dd-mm-yyyy'),9000, null, 30);
+
+1 row created.
+
+SQL> 
+SQL> insert into employees_1 
+  2  (empno,ename,job,mgr,hiredate,sal,comm,deptno)
+  3  values(1013, 'MILLER', 'CLERK', 7782, to_date('23-1-2021','dd-mm-yyyy'), 11300, null, 10);
+
+1 row created.
+
+SQL> 
+SQL> insert into employees_1 
+  2  (empno,ename,job,mgr,hiredate,sal,comm,deptno)
+  3  values(1014, 'JAKE', 'SALESMAN', 7783, to_date('16-8-2021','dd-mm-yyyy'), 12300, null, 10);
+
+1 row created.
+
+SQL> 
+SQL> insert into employees_1 
+  2  (empno,ename,job,mgr,hiredate,sal,comm,deptno)
+  3  values(1015, 'TOM', 'CEO', 7783, to_date('22-10-2015','dd-mm-yyyy'), 35000, null, 10);
+
+1 row created.
+
+SQL> SELECT * FROM employees_1;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      1001 KING       PRESIDENT            17-NOV-20      28000
+        10
+
+      1002 BLAKE      MANAGER         7839 01-MAY-19      25000
+        30
+
+      1003 CLARK      MANAGER         7839 09-JUN-21      24000
+        10
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      1004 JONES      MANAGER         7839 02-APR-21      22500
+        20
+
+      1005 SCOTT      ANALYST         7566 13-JUL-20      23000
+        20
+
+      1006 FORD       ANALYST         7566 03-DEC-19      20000
+        20
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      1007 SMITH      CLERK           7902 17-DEC-20      13000
+        20
+
+      1010 MARTIN     SALESMAN        7698 28-SEP-81      11250       1400
+        30
+
+      1011 ADAMS      CLERK           7788 13-MAY-19      12000
+        20
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      1012 JAMES      CLERK           7698 03-DEC-20       9000
+        30
+
+      1013 MILLER     CLERK           7782 23-JAN-21      11300
+        10
+
+      1014 JAKE       SALESMAN        7783 16-AUG-21      12300
+        10
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      1015 TOM        CEO             7783 22-OCT-15      35000
+        10
+
+
+13 rows selected.
+
+
+SQL> describe employees_1;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMPNO                                              NUMBER(4)
+ ENAME                                              VARCHAR2(10)
+ JOB                                                VARCHAR2(9)
+ MGR                                                NUMBER(4)
+ HIREDATE                                           DATE
+ SAL                                                NUMBER(7,2)
+ COMM                                               NUMBER(7,2)
+ DEPTNO                                             NUMBER(2)
