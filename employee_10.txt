@@ -1,0 +1,72 @@
+create table employees_10(
+empno number(4,0),
+ename varchar2(10),
+job varchar2(9),
+mgr number(4,0),
+hiredate date,
+sal number(7,2),
+comm number(7,2),
+deptno number(2,0)
+);
+
+
+
+insert into employees_10
+(empno,ename,job,mgr,hiredate,sal,comm,deptno)
+values(1001, 'KING', 'PRESIDENT', 1101, to_date('17-11-2020','dd-mm-yyyy'), 28000, null, 10);
+
+insert into employees_10
+(empno,ename,job,mgr,hiredate,sal,comm,deptno)
+values(1002, 'BLAKE', 'MANAGER', 2102, to_date('1-5-2019','dd-mm-yyyy'), 25000, null, 30);
+
+insert into employees_10
+(empno,ename,job,mgr,hiredate,sal,comm,deptno)
+values(1003, 'CLARK', 'MANAGER', 3103, to_date('9-6-2021','dd-mm-yyyy'), 24000, null, 10);
+
+insert into employees_10
+(empno,ename,job,mgr,hiredate,sal,comm,deptno)
+values(1004, 'JONES', 'MANAGER', 4104, to_date('2-4-2021','dd-mm-yyyy'), 22500, null, 20);
+
+insert into employees_10 
+(empno,ename,job,mgr,hiredate,sal,comm,deptno)
+values(1005, 'SCOTT', 'ANALYST', 5105, to_date('13-7-2020','dd-mm-yyyy') , 23000, null, 20);
+
+insert into employees_10
+(empno,ename,job,mgr,hiredate,sal,comm,deptno)
+values(1006, 'FORD', 'ANALYST', 6106, to_date('3-12-2019','dd-mm-yyyy'), 20000, null, 20);
+
+insert into employees_10
+(empno,ename,job,mgr,hiredate,sal,comm,deptno)
+values(1007, 'SMITH', 'CLERK', 7107, to_date('17-12-2020','dd-mm-yyyy'), 13000, null, 20);
+
+insert into employees_10
+(empno,ename,job,mgr,hiredate,sal,comm,deptno)
+values(1008, 'ALLEN', 'SALESMAN', 8108, to_date('20-2-2019','dd-mm-yyyy'), 11600, 300, 30);
+
+insert into employees_10
+(empno,ename,job,mgr,hiredate,sal,comm,deptno)
+values(1009, 'WARD', 'SALESMAN', 9109, to_date('22-2-2020','dd-mm-yyyy'), 11250, 500, 30);
+
+insert into employees_10 
+(empno,ename,job,mgr,hiredate,sal,comm,deptno)
+values(1010, 'MARTIN', 'SALESMAN', 1010, to_date('28-9-2020','dd-mm-yyyy'), 11250, 1400, 30);
+
+insert into employees_10
+(empno,ename,job,mgr,hiredate,sal,comm,deptno)
+values(1011, 'ADAMS', 'CLERK', 1111, to_date('13-5-2019', 'dd-mm-yyyy'),12000, null, 20);
+
+insert into employees_10 
+(empno,ename,job,mgr,hiredate,sal,comm,deptno)
+values(1012, 'JAMES', 'CLERK', 1212, to_date('3-12-2020','dd-mm-yyyy'),9000, null, 30);
+
+insert into employees_10 
+(empno,ename,job,mgr,hiredate,sal,comm,deptno)
+values(1013, 'MILLER', 'CLERK', 1313, to_date('23-1-2021','dd-mm-yyyy'), 11300, null, 10);
+
+insert into employees_10
+(empno,ename,job,mgr,hiredate,sal,comm,deptno)
+values(1014, 'JAKE', 'SALESMAN', 1414, to_date('16-8-2021','dd-mm-yyyy'), 12300, 800, 10);
+
+insert into employees_10 
+(empno,ename,job,mgr,hiredate,sal,comm,deptno)
+values(1015, 'TOM', 'CEO', 1515, to_date('22-10-2015','dd-mm-yyyy'), 35000, null, 10);
