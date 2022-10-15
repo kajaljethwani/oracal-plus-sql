@@ -1,0 +1,70 @@
+
+SQL> select * from employees_11 where job='MANAGER';
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      1002 BLAKE      MANAGER         2102 01-MAY-19      25000
+        30
+
+      1003 CLARK      MANAGER         3103 09-JUN-21      24000
+        10
+
+      1004 JONES      MANAGER         4104 02-APR-21      22500
+        20
+
+
+SQL> select * from employees_11 where job='PRESIDENT';
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      1001 KING       PRESIDENT       1101 17-NOV-20      28000
+        10
+
+
+SQL> select * from employees_11 where job in('MANAGER', 'CLERK');
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      1002 BLAKE      MANAGER         2102 01-MAY-19      25000
+        30
+
+      1003 CLARK      MANAGER         3103 09-JUN-21      24000
+        10
+
+      1004 JONES      MANAGER         4104 02-APR-21      22500
+        20
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      1007 SMITH      CLERK           7107 17-DEC-20      13000
+        20
+
+      1011 ADAMS      CLERK           1111 13-MAY-19      12000
+        20
+
+      1012 JAMES      CLERK           1212 03-DEC-20       9000
+        30
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      1013 MILLER     CLERK           1313 23-JAN-21      11300
+        10
+
+
+7 rows selected.
+
+SQL> commit;
+
+Commit complete.
