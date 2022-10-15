@@ -1,0 +1,568 @@
+SQL> create table employees_11(
+  2  empno number(4,0),
+  3  ename varchar2(10),
+  4  job varchar2(9),
+  5  mgr number(4,0),
+  6  hiredate date,
+  7  sal number(7,2),
+  8  comm number(7,2),
+  9  deptno number(2,0)
+ 10  );
+
+Table created.
+
+SQL> insert into employees_11
+  2  (empno,ename,job,mgr,hiredate,sal,comm,deptno)
+  3  values(1001, 'KING', 'PRESIDENT', 1101, to_date('17
+
+1 row created.
+
+SQL> 
+SQL> insert into employees_11
+  2  (empno,ename,job,mgr,hiredate,sal,comm,deptno)
+  3  values(1002, 'BLAKE', 'MANAGER', 2102, to_date('1-5
+
+1 row created.
+
+SQL> 
+SQL> insert into employees_11
+  2  (empno,ename,job,mgr,hiredate,sal,comm,deptno)
+  3  values(1003, 'CLARK', 'MANAGER', 3103, to_date('9-6
+
+1 row created.
+
+SQL> 
+SQL> insert into employees_11
+  2  (empno,ename,job,mgr,hiredate,sal,comm,deptno)
+  3  values(1004, 'JONES', 'MANAGER', 4104, to_date('2-4
+
+1 row created.
+
+SQL> 
+SQL> insert into employees_11
+  2  (empno,ename,job,mgr,hiredate,sal,comm,deptno)
+  3  values(1005, 'SCOTT', 'ANALYST', 5105, to_date('13-
+
+1 row created.
+
+SQL> 
+SQL> insert into employees_11
+  2  (empno,ename,job,mgr,hiredate,sal,comm,deptno)
+  3  values(1006, 'FORD', 'ANALYST', 6106, to_date('3-12
+
+1 row created.
+
+SQL> 
+SQL> insert into employees_11
+  2  (empno,ename,job,mgr,hiredate,sal,comm,deptno)
+  3  values(1007, 'SMITH', 'CLERK', 7107, to_date('17-12
+
+1 row created.
+
+SQL> 
+SQL> insert into employees_11
+  2  (empno,ename,job,mgr,hiredate,sal,comm,deptno)
+  3  values(1008, 'ALLEN', 'SALESMAN', 8108, to_date('20
+
+1 row created.
+
+SQL> 
+SQL> insert into employees_11
+  2  (empno,ename,job,mgr,hiredate,sal,comm,deptno)
+  3  values(1009, 'WARD', 'SALESMAN', 9109, to_date('22-
+
+1 row created.
+
+SQL> 
+SQL> insert into employees_11
+  2  (empno,ename,job,mgr,hiredate,sal,comm,deptno)
+  3  values(1010, 'MARTIN', 'SALESMAN', 1010, to_date('2
+
+1 row created.
+
+SQL> 
+SQL> insert into employees_11
+  2  (empno,ename,job,mgr,hiredate,sal,comm,deptno)
+  3  values(1011, 'ADAMS', 'CLERK', 1111, to_date('13-5-
+
+1 row created.
+
+SQL> 
+SQL> insert into employees_11 
+  2  (empno,ename,job,mgr,hiredate,sal,comm,deptno)
+  3  values(1012, 'JAMES', 'CLERK', 1212, to_date('3-12-
+
+1 row created.
+
+SQL> 
+SQL> insert into employees_11
+  2  (empno,ename,job,mgr,hiredate,sal,comm,deptno)
+  3  values(1013, 'MILLER', 'CLERK', 1313, to_date('23-1
+
+1 row created.
+
+SQL> 
+SQL> insert into employees_11
+  2  (empno,ename,job,mgr,hiredate,sal,comm,deptno)
+  3  values(1014, 'JAKE', 'SALESMAN', 1414, to_date('16-
+
+1 row created.
+
+SQL> 
+SQL> insert into employees_11 
+  2  (empno,ename,job,mgr,hiredate,sal,comm,deptno)
+  3  values(1015, 'TOM', 'CEO', 1515, to_date('22-10-201
+
+1 row created.
+
+SQL> describe employees_11;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----
+ EMPNO                                              NUMB
+ ENAME                                              VARC
+ JOB                                                VARC
+ MGR                                                NUMB
+ HIREDATE                                           DATE
+ SAL                                                NUMB
+ COMM                                               NUMB
+ DEPTNO                                             NUMB
+
+SQL> Select * From employees_11;
+
+     EMPNO ENAME      JOB              MGR HIREDATE     
+---------- ---------- --------- ---------- --------- ---
+    DEPTNO
+----------
+      1001 KING       PRESIDENT       1101 17-NOV-20    
+        10
+
+      1002 BLAKE      MANAGER         2102 01-MAY-19    
+        30
+
+      1003 CLARK      MANAGER         3103 09-JUN-21    
+        10
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE     
+---------- ---------- --------- ---------- --------- ---
+    DEPTNO
+----------
+      1004 JONES      MANAGER         4104 02-APR-21    
+        20
+
+      1005 SCOTT      ANALYST         5105 13-JUL-20    
+        20
+
+      1006 FORD       ANALYST         6106 03-DEC-19    
+        20
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE     
+---------- ---------- --------- ---------- --------- ---
+    DEPTNO
+----------
+      1007 SMITH      CLERK           7107 17-DEC-20    
+        20
+
+      1008 ALLEN      SALESMAN        8108 20-FEB-19    
+        30
+
+      1009 WARD       SALESMAN        9109 22-FEB-20    
+        30
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE     
+---------- ---------- --------- ---------- --------- ---
+    DEPTNO
+----------
+      1010 MARTIN     SALESMAN        1010 28-SEP-20    
+        30
+
+      1011 ADAMS      CLERK           1111 13-MAY-19    
+        20
+
+      1012 JAMES      CLERK           1212 03-DEC-20    
+        30
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE     
+---------- ---------- --------- ---------- --------- ---
+    DEPTNO
+----------
+      1013 MILLER     CLERK           1313 23-JAN-21    
+        10
+
+      1014 JAKE       SALESMAN        1414 16-AUG-21    
+        10
+
+      1015 TOM        CEO             1515 22-OCT-15    
+        10
+
+
+15 rows selected.
+
+SQL> commit;
+
+Commit complete.
+
+SQL> select * from employees_11;
+
+     EMPNO ENAME      JOB              MGR HIREDATE     
+---------- ---------- --------- ---------- --------- ---
+    DEPTNO
+----------
+      1001 KING       PRESIDENT       1101 17-NOV-20    
+        10
+
+      1002 BLAKE      MANAGER         2102 01-MAY-19    
+        30
+
+      1003 CLARK      MANAGER         3103 09-JUN-21    
+        10
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE     
+---------- ---------- --------- ---------- --------- ---
+    DEPTNO
+----------
+      1004 JONES      MANAGER         4104 02-APR-21    
+        20
+
+      1005 SCOTT      ANALYST         5105 13-JUL-20    
+        20
+
+      1006 FORD       ANALYST         6106 03-DEC-19    
+        20
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE     
+---------- ---------- --------- ---------- --------- ---
+    DEPTNO
+----------
+      1007 SMITH      CLERK           7107 17-DEC-20    
+        20
+
+      1008 ALLEN      SALESMAN        8108 20-FEB-19    
+        30
+
+      1009 WARD       SALESMAN        9109 22-FEB-20    
+        30
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE     
+---------- ---------- --------- ---------- --------- ---
+    DEPTNO
+----------
+      1010 MARTIN     SALESMAN        1010 28-SEP-20    
+        30
+
+      1011 ADAMS      CLERK           1111 13-MAY-19    
+        20
+
+      1012 JAMES      CLERK           1212 03-DEC-20    
+        30
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE     
+---------- ---------- --------- ---------- --------- ---
+    DEPTNO
+----------
+      1013 MILLER     CLERK           1313 23-JAN-21    
+        10
+
+      1014 JAKE       SALESMAN        1414 16-AUG-21    
+        10
+
+      1015 TOM        CEO             1515 22-OCT-15    
+        10
+
+
+15 rows selected.
+
+SQL> select * from tab;
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+DEPT                           TABLE
+EMP                            TABLE
+BONUS                          TABLE
+SALGRADE                       TABLE
+EMPLOYEES_22                   TABLE
+EMPLOYEES_11                   TABLE
+EMPLOYEES                      TABLE
+EMPLOYEESS                     TABLE
+EMPLOYEESSS                    TABLE
+EMPLOYEEESSSS                  TABLE
+EMPLOYEES_1                    TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+CUSTOMERS                      TABLE
+EMPLOYEE_DETAILS               TABLE
+
+13 rows selected.
+
+SQL> select empno from employees_11;
+
+     EMPNO
+----------
+      1001
+      1002
+      1003
+      1004
+      1005
+      1006
+      1007
+      1008
+      1009
+      1010
+      1011
+
+     EMPNO
+----------
+      1012
+      1013
+      1014
+      1015
+
+15 rows selected.
+
+SQL> select ename,job from employees_11;
+
+ENAME      JOB
+---------- ---------
+KING       PRESIDENT
+BLAKE      MANAGER
+CLARK      MANAGER
+JONES      MANAGER
+SCOTT      ANALYST
+FORD       ANALYST
+SMITH      CLERK
+ALLEN      SALESMAN
+WARD       SALESMAN
+MARTIN     SALESMAN
+ADAMS      CLERK
+
+ENAME      JOB
+---------- ---------
+JAMES      CLERK
+MILLER     CLERK
+JAKE       SALESMAN
+TOM        CEO
+
+15 rows selected.
+
+SQL> selectb empno,comm from employees_11;
+SP2-0734: unknown command beginning "selectb em..." - re
+SQL> select empno,comm from employees_11;
+
+     EMPNO       COMM
+---------- ----------
+      1001
+      1002
+      1003
+      1004
+      1005
+      1006
+      1007
+      1008        300
+      1009        500
+      1010       1400
+      1011
+
+     EMPNO       COMM
+---------- ----------
+      1012
+      1013
+      1014        800
+      1015
+
+15 rows selected.
+
+SQL> select empno, mgr from employees_11;
+
+     EMPNO        MGR
+---------- ----------
+      1001       1101
+      1002       2102
+      1003       3103
+      1004       4104
+      1005       5105
+      1006       6106
+      1007       7107
+      1008       8108
+      1009       9109
+      1010       1010
+      1011       1111
+
+     EMPNO        MGR
+---------- ----------
+      1012       1212
+      1013       1313
+      1014       1414
+      1015       1515
+
+15 rows selected.
+
+SQL> select deptno from dept;
+
+    DEPTNO
+----------
+        10
+        20
+        30
+        40
+
+SQL> select empno,ename,job,mgr from employees_11;
+
+     EMPNO ENAME      JOB              MGR
+---------- ---------- --------- ----------
+      1001 KING       PRESIDENT       1101
+      1002 BLAKE      MANAGER         2102
+      1003 CLARK      MANAGER         3103
+      1004 JONES      MANAGER         4104
+      1005 SCOTT      ANALYST         5105
+      1006 FORD       ANALYST         6106
+      1007 SMITH      CLERK           7107
+      1008 ALLEN      SALESMAN        8108
+      1009 WARD       SALESMAN        9109
+      1010 MARTIN     SALESMAN        1010
+      1011 ADAMS      CLERK           1111
+
+     EMPNO ENAME      JOB              MGR
+---------- ---------- --------- ----------
+      1012 JAMES      CLERK           1212
+      1013 MILLER     CLERK           1313
+      1014 JAKE       SALESMAN        1414
+      1015 TOM        CEO             1515
+
+15 rows selected.
+
+SQL> select ename,mgr from employees_11;
+
+ENAME             MGR
+---------- ----------
+KING             1101
+BLAKE            2102
+CLARK            3103
+JONES            4104
+SCOTT            5105
+FORD             6106
+SMITH            7107
+ALLEN            8108
+WARD             9109
+MARTIN           1010
+ADAMS            1111
+
+ENAME             MGR
+---------- ----------
+JAMES            1212
+MILLER           1313
+JAKE             1414
+TOM              1515
+
+15 rows selected.
+
+SQL> select job,comm from employees_11;
+
+JOB             COMM
+--------- ----------
+PRESIDENT
+MANAGER
+MANAGER
+MANAGER
+ANALYST
+ANALYST
+CLERK
+SALESMAN         300
+SALESMAN         500
+SALESMAN        1400
+CLERK
+
+JOB             COMM
+--------- ----------
+CLERK
+CLERK
+SALESMAN         800
+CEO
+
+15 rows selected.
+
+SQL> select ename, deptno from employees_11;
+
+ENAME          DEPTNO
+---------- ----------
+KING               10
+BLAKE              30
+CLARK              10
+JONES              20
+SCOTT              20
+FORD               20
+SMITH              20
+ALLEN              30
+WARD               30
+MARTIN             30
+ADAMS              20
+
+ENAME          DEPTNO
+---------- ----------
+JAMES              30
+MILLER             10
+JAKE               10
+TOM                10
+
+15 rows selected.
+
+SQL> Select deptno, ename, sal, job from employees_11;
+
+    DEPTNO ENAME             SAL JOB
+---------- ---------- ---------- ---------
+        10 KING            28000 PRESIDENT
+        30 BLAKE           25000 MANAGER
+        10 CLARK           24000 MANAGER
+        20 JONES           22500 MANAGER
+        20 SCOTT           23000 ANALYST
+        20 FORD            20000 ANALYST
+        20 SMITH           13000 CLERK
+        30 ALLEN           11600 SALESMAN
+        30 WARD            11250 SALESMAN
+        30 MARTIN          11250 SALESMAN
+        20 ADAMS           12000 CLERK
+
+    DEPTNO ENAME             SAL JOB
+---------- ---------- ---------- ---------
+        30 JAMES            9000 CLERK
+        10 MILLER          11300 CLERK
+        10 JAKE            12300 SALESMAN
+        10 TOM             35000 CEO
+
+15 rows selected.
+
+SQL> Select deptno, dname from dept;
+
+    DEPTNO DNAME
+---------- --------------
+        10 ACCOUNTING
+        20 RESEARCH
+        30 SALES
+        40 OPERATIONS
+
+SQL> Select loc from dept;
+
+LOC
+-------------
+NEW YORK
+DALLAS
+CHICAGO
+BOSTON
+
+SQL> Select dname, loc from dept;
+
+DNAME          LOC
+-------------- -------------
+ACCOUNTING     NEW YORK
+RESEARCH       DALLAS
+SALES          CHICAGO
+OPERATIONS     BOSTON
+
+SQL> commit;
