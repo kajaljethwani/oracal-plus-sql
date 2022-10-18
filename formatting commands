@@ -1,0 +1,215 @@
+SQL> select ename "MALAY" from employees_11;
+
+MALAY
+----------
+KING
+BLAKE
+CLARK
+JONES
+SCOTT
+FORD
+SMITH
+ALLEN
+WARD
+MARTIN
+ADAMS
+
+MALAY
+----------
+JAMES
+MILLER
+JAKE
+TOM
+
+15 rows selected.
+
+SQL> select sal"SALARIES" from employees_11;
+
+  SALARIES
+----------
+     28000
+     25000
+     24000
+     22500
+     23000
+     20000
+     13000
+     11600
+     11250
+     11250
+     12000
+
+  SALARIES
+----------
+      9000
+     11300
+     12300
+     35000
+
+15 rows selected.
+
+SQL> select employees_11 "EMPLOYEE NAME", job "DESIGNATION" from employees_11;
+select employees_11 "EMPLOYEE NAME", job "DESIGNATION" from employees_11
+       *
+ERROR at line 1:
+ORA-00904: "EMPLOYEES_11": invalid identifier
+
+
+SQL> select emp "EMPLOYEES NAME", job "DESIGNATION" from employees_11;
+select emp "EMPLOYEES NAME", job "DESIGNATION" from employees_11
+       *
+ERROR at line 1:
+ORA-00904: "EMP": invalid identifier
+
+
+SQL> select ename "EMPLOYEE NAME",job "DESIDNATION" from employees_11;
+
+EMPLOYEE N DESIDNATI
+---------- ---------
+KING       PRESIDENT
+BLAKE      MANAGER
+CLARK      MANAGER
+JONES      MANAGER
+SCOTT      ANALYST
+FORD       ANALYST
+SMITH      CLERK
+ALLEN      SALESMAN
+WARD       SALESMAN
+MARTIN     SALESMAN
+ADAMS      CLERK
+
+EMPLOYEE N DESIDNATI
+---------- ---------
+JAMES      CLERK
+MILLER     CLERK
+JAKE       SALESMAN
+TOM        CEO
+
+15 rows selected.
+
+SQL> select empno,ename,job,sal,sal+100 from employees_11 where job='MANAGER';
+
+     EMPNO ENAME      JOB              SAL    SAL+100
+---------- ---------- --------- ---------- ----------
+      1002 BLAKE      MANAGER        25000      25100
+      1003 CLARK      MANAGER        24000      24100
+      1004 JONES      MANAGER        22500      22600
+
+SQL> select empno,ename,job,sal,(sal+1000)-4500 from employees_11;
+
+     EMPNO ENAME      JOB              SAL (SAL+1000)-4500
+---------- ---------- --------- ---------- ---------------
+      1001 KING       PRESIDENT      28000           24500
+      1002 BLAKE      MANAGER        25000           21500
+      1003 CLARK      MANAGER        24000           20500
+      1004 JONES      MANAGER        22500           19000
+      1005 SCOTT      ANALYST        23000           19500
+      1006 FORD       ANALYST        20000           16500
+      1007 SMITH      CLERK          13000            9500
+      1008 ALLEN      SALESMAN       11600            8100
+      1009 WARD       SALESMAN       11250            7750
+      1010 MARTIN     SALESMAN       11250            7750
+      1011 ADAMS      CLERK          12000            8500
+
+     EMPNO ENAME      JOB              SAL (SAL+1000)-4500
+---------- ---------- --------- ---------- ---------------
+      1012 JAMES      CLERK           9000            5500
+      1013 MILLER     CLERK          11300            7800
+      1014 JAKE       SALESMAN       12300            8800
+      1015 TOM        CEO            35000           31500
+
+15 rows selected.
+
+SQL> select empno,ename,sal,(sal+100) from employees_11 where ename='SCOTT';
+
+     EMPNO ENAME             SAL  (SAL+100)
+---------- ---------- ---------- ----------
+      1005 SCOTT           23000      23100
+
+SQL> select empno,ename,sal,((sal+500)-300)/100 from employees_11;
+
+     EMPNO ENAME             SAL ((SAL+500)-300)/100
+---------- ---------- ---------- -------------------
+      1001 KING            28000                 282
+      1002 BLAKE           25000                 252
+      1003 CLARK           24000                 242
+      1004 JONES           22500                 227
+      1005 SCOTT           23000                 232
+      1006 FORD            20000                 202
+      1007 SMITH           13000                 132
+      1008 ALLEN           11600                 118
+      1009 WARD            11250               114.5
+      1010 MARTIN          11250               114.5
+      1011 ADAMS           12000                 122
+
+     EMPNO ENAME             SAL ((SAL+500)-300)/100
+---------- ---------- ---------- -------------------
+      1012 JAMES            9000                  92
+      1013 MILLER          11300                 115
+      1014 JAKE            12300                 125
+      1015 TOM             35000                 352
+
+15 rows selected.
+
+SQL> select empno,ename,sal,(sal*5)/100 from employees_11;
+
+     EMPNO ENAME             SAL (SAL*5)/100
+---------- ---------- ---------- -----------
+      1001 KING            28000        1400
+      1002 BLAKE           25000        1250
+      1003 CLARK           24000        1200
+      1004 JONES           22500        1125
+      1005 SCOTT           23000        1150
+      1006 FORD            20000        1000
+      1007 SMITH           13000         650
+      1008 ALLEN           11600         580
+      1009 WARD            11250       562.5
+      1010 MARTIN          11250       562.5
+      1011 ADAMS           12000         600
+
+     EMPNO ENAME             SAL (SAL*5)/100
+---------- ---------- ---------- -----------
+      1012 JAMES            9000         450
+      1013 MILLER          11300         565
+      1014 JAKE            12300         615
+      1015 TOM             35000        1750
+
+15 rows selected.
+
+SQL> select empno,ename,sal,(sal*8)/100 from employees_11 where job='SALESMAN';
+
+     EMPNO ENAME             SAL (SAL*8)/100
+---------- ---------- ---------- -----------
+      1008 ALLEN           11600         928
+      1009 WARD            11250         900
+      1010 MARTIN          11250         900
+      1014 JAKE            12300         984
+
+SQL> select empno,ename,sal,(sal*2) from employees_11;
+
+     EMPNO ENAME             SAL    (SAL*2)
+---------- ---------- ---------- ----------
+      1001 KING            28000      56000
+      1002 BLAKE           25000      50000
+      1003 CLARK           24000      48000
+      1004 JONES           22500      45000
+      1005 SCOTT           23000      46000
+      1006 FORD            20000      40000
+      1007 SMITH           13000      26000
+      1008 ALLEN           11600      23200
+      1009 WARD            11250      22500
+      1010 MARTIN          11250      22500
+      1011 ADAMS           12000      24000
+
+     EMPNO ENAME             SAL    (SAL*2)
+---------- ---------- ---------- ----------
+      1012 JAMES            9000      18000
+      1013 MILLER          11300      22600
+      1014 JAKE            12300      24600
+      1015 TOM             35000      70000
+
+15 rows selected.
+
+SQL> commit;
+
+Commit complete.
